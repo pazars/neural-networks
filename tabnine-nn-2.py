@@ -2,6 +2,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import numpy as np
 
 # Define the dataset
 # In this example, we'll use a simple dataset for demonstration purposes
@@ -29,7 +30,7 @@ criterion = nn.BCELoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
 
 # Train the model
-for epoch in range(100):
+for epoch in range(10):
     # Forward pass
     outputs = model(x_train)
     loss = criterion(outputs, y_train)
